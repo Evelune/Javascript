@@ -46,6 +46,8 @@ const shoppingCart = [
 
 ]
 
+
+
 const totalPrice = shoppingCart.reduce((accumulator, currentItem) => {
     return accumulator + (currentItem.price * currentItem.quantity);
 }, 0);
