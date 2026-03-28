@@ -53,3 +53,6 @@ const totalPrice = shoppingCart.reduce((accumulator, currentItem) => {
 }, 0);
 
 console.log(totalPrice); // 2950 - The reduce method executes a reducer function (that you provide) on each element of the array, resulting in a single output value. In this case, it calculates the total price of all items in the shopping cart by multiplying the price and quantity of each item and summing them up to return the total price.   
+
+
+
