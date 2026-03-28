@@ -22,3 +22,5 @@ const result2 = myNums
   .map((nums) => nums + 1)
   .filter((nums) => nums < 30);
 console.log(result2); // [31, 32, 33, 34, 35] - This code first uses map to add 10 to each element of the original array, then it uses another map to multiply each element by 1 (which does not change the values), and finally it uses filter to return a new array with only the elements that are greater than 30.
+
+
