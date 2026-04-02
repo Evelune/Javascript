@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Add | Edit | Remove</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="parent">
+      <li>python</li>
+    </ul>
+  </body>
+  <script>
+    // Add Element to the Document in ul
+    function addElement(language) {
+      // Create a new li element
+      let element = document.createElement("li");
+      console.log(element);
+
+      // assign a value to element
+    //   element.appendChild(document.createTextNode(language));
+    element.textContent = language
+
+      // add element to the parent
+      document.querySelector(".parent").append(element);
+    }
+
+    // Edit Element to the Document
+    function editElement(language) {
+      //Select the node elemet
+      let element = document.querySelector("li:nth-child(1)");
+
+      //   element.innerHTML = language   Not use due to optimization problem
+      let li = document.createElement('li')
+      li.textContent = language
+      li.style.color = 'yellow'
+      li.style.fontSize = '24px'
+      element.replaceWith(li)
+    }
+
+    // Remove the element
+    function removeElement(num){
+        let element = document.querySelector('li:nth-child(1)')
+        element.remove()
+    }
+
+
+
+    addElement("Jarvis");
+    editElement("Friday");
+    removeElement(1)
+  </script>
+</html>
