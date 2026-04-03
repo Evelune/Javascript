@@ -6,7 +6,7 @@
     <title>Color Changer</title>
     <style>
       * {
-        color: black;
+        color: inherit;
       }
 
       body {
@@ -74,6 +74,7 @@
       }
     </style>
   </head>
+
   <body>
     <div id="box">
       <h1>Select the color</h1>
@@ -89,14 +90,36 @@
   </body>
   <script>
     let element = document.querySelectorAll(".button");
-    let body = document.querySelector('body')
+    let body = document.querySelector("body");
     element.forEach(function (button) {
-      button.onclick = function () {
-        // if(button.id === 'yellow'){
-        // document.body.style.color = 'black'
-        // }
-        body.style.backgroundColor = button.id;
-      };
+      button.addEventListener("click", function (e) {
+        switch (e.target.id) {
+          case "yellow":
+            body.style.backgroundColor = "yellow";
+            body.style.color = "black";
+
+            break;
+
+          case "red":
+            body.style.backgroundColor = "red";
+
+            break;
+
+          case "blue":
+            body.style.backgroundColor = "blue";
+            break;
+
+          case "black":
+            body.style.backgroundColor = "black";
+            body.style.color = "white";
+            break;
+
+          case "white":
+            body.style.backgroundColor = "white";
+            body.style.color = "black";
+            break;
+        }
+      });
     });
   </script>
 </html>
