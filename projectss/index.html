@@ -6,7 +6,7 @@
     <title>Color Changer</title>
     <style>
       * {
-        color: white;
+        color: black;
       }
 
       body {
@@ -88,10 +88,14 @@
     </div>
   </body>
   <script>
-    let element = document.querySelectorAll('.button');
+    let element = document.querySelectorAll(".button");
+    let body = document.querySelector('body')
     element.forEach(function (button) {
       button.onclick = function () {
-        document.body.style.backgroundColor = button.id;
+        // if(button.id === 'yellow'){
+        // document.body.style.color = 'black'
+        // }
+        body.style.backgroundColor = button.id;
       };
     });
   </script>
