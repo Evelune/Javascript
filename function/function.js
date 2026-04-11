@@ -90,3 +90,17 @@ let newNum = num.filter((items)=>{
 })
 
 console.log(newNum);
+
+
+
+
+// Reduce 
+// Perform some operation & reduce the array to a single value. It returns that signle value
+
+let items = [1,2,3,4,5,6,6,7,8,9]
+const initial = 0
+const sumWithInitial = items.reduce((prev,curr) => {
+    return prev > curr ? prev : curr;
+});
+
+console.log(sumWithInitial);
