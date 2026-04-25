@@ -4,17 +4,13 @@ function a(){
     console.log("a called")
 }
 
-
-
 // Function Expression
 let b = function greet(){
     console.log("b called ");
-    
 }
 b()
 
 // The difference between function expression and function statment in hositing, a() will run with no error, while b give undefined becuase till the code reach at line number 10 than only function is assigned to b until than b is undefined.
-
 
 
 // Anonymous Function 
@@ -22,7 +18,6 @@ b()
 // function () {
 
 // }
-
 
 // Named Function Expression
 let ab = function ab(){
@@ -37,7 +32,6 @@ function sum(a,b){
 
 // Here 5 ,5 is called argument
 sum(5,5) 
-
 
 
 // First Class Function
@@ -57,9 +51,7 @@ function y(){
 fcf(y)
 
 
-
 // first class citizen is the same as first class function
-
 
 
 
